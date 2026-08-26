@@ -10,3 +10,4 @@
 
 ## System Architecture (Data Path)
 
+<img src="Структурная схема.svg"/>
