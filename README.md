@@ -11,3 +11,7 @@
 ## System Architecture (Data Path)
 
 <img src="Структурная схема.svg"/>
+
+PL (FPGA): MIPI CSI-2 RX -> Data Formatter (RAW14 to RAW16) -> Lossless Compressor -> AXI VDMA.
+
+PS (ARM Linux): Custom V4L2 Subdevice Driver -> User-Space mmap -> Gigabit Ethernet.
