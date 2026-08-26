@@ -10,7 +10,7 @@
 
 ## System Architecture (Data Path)
 
-<img src="Структурная схема.svg"/>
+<img src="docs/Структурная схема.svg"/>
 
 PL (FPGA): MIPI CSI-2 RX -> Data Formatter (RAW14 to RAW16) -> Lossless Compressor -> AXI VDMA.
 
