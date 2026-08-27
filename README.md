@@ -15,3 +15,32 @@
 PL (FPGA): MIPI CSI-2 RX -> Data Formatter (RAW14 to RAW16) -> Lossless Compressor -> AXI VDMA.
 
 PS (ARM Linux): Custom V4L2 Subdevice Driver -> User-Space mmap -> Gigabit Ethernet.
+
+## Структура репозитория
+
+Проект организован в соответствии с индустриальными стандартами аппаратно-программного сопроектирования (HW/SW Co-Design). Бинарные файлы и графические проекты Vivado (`.xpr`) исключены из системы контроля версий — весь дизайн генерируется из исходных скриптов.
+
+```text
+zynq-thermal-vision-pipeline/
+├── docs/                   
+│   ├── datasheets/         
+│   ├── architecture/       
+│   └── synth_reports/      
+├── hw/                     
+│   ├── rtl/                
+│   │   ├── mipi_formatter/ 
+│   │   └── compressor/     
+│   ├── tb/                 
+│   ├── constraints/        
+│   └── bd/                
+├── sw/                    
+│   ├── linux/              
+│   │   ├── driver/         
+│   │   └── devicetree/     
+│   └── app/                
+│       ├── capture/        
+│       └── scripts/        
+├── scripts/                
+│   ├── build_hw.tcl        
+│   └── Makefile            
+└── README.md             
